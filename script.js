@@ -102,3 +102,8 @@ window.addEventListener("load", kuis.draw);
 function startQuiz() {
   location.reload();
 }
+function finishQuiz() {
+  if (confirm("Give up?")) {
+    window.close();
+    }
+}  

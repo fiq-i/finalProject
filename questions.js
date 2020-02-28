@@ -1,6 +1,3 @@
-/* [THE "DATABASE" - QUESTIONS, OPTIONS, ANSWERS] */
-// An array that contains objects
-// In the format of {q: QUESTION, o: OPTIONS, a: CORRECT ANSWER}
 
 var questions = [
 	{
