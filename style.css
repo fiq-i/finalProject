@@ -1,0 +1,80 @@
+body {
+	background-image: url('bg.jpg');
+	text-align: center;
+  }
+
+h1 {
+	color: #ccc;
+}
+
+h2 {
+	text-align: center;
+	
+}
+
+h3 {
+	text-align: center;
+}
+
+div {
+	color: #ccc;
+	text-align: center;
+}
+p {
+	text-align: center;
+	}
+.img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	
+	text-align: center;
+	display: inline-block;
+  }
+#demo {
+	color: aqua;
+	position: fixed;
+	display: inline-block;
+	text-align: center;
+    z-index: 999;
+}
+  /* Isi Kuis Trivia */
+#kuis-trivia {
+	font-family: arial, sans-serif;
+  }
+  
+/* Pertanyaan */
+  #kuis-trivia .question {
+	padding: 15px;
+	margin: 10px;
+	background-image: url('bg.jpg');
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	
+  }
+  
+  #kuis-trivia h1 {
+	font-size: 22px;
+	margin: 5px 0;
+	color: #ccc;
+  }
+  
+  /* Tombol Pilihan */
+  #kuis-trivia label {
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	margin-top: 10px;
+	color: rgb(204, 204, 204);
+  }
+  
+  /* Tombol Submit */
+  #kuis-trivia input[type=submit] {
+	background: #972121;
+	color: #fff;
+	padding: 10px;
+	border: 0;
+	padding: 10px 20px;
+	margin-top: 10px;
+	font-size: 20px;
+  }
