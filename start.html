@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="icon.png">
+    <script src="questions.js"></script>
     <script src="script.js"></script>
-</head>
-
-<div><form name="form1" action="index.html" method="POST">
-<div>
-<h1>S.H.I.E.L.D. Agent Trainee Basic Test</h1>
-</div>
-<div>
-<h2></h2>
-<h3>Before S.H.I.E.L.D. can accept you to as a full agent, you need to pass a series of basic test to see if you can identify the Avengers correctly!</h3>
-
-<h2>Please fill in your name, S.H.I.E.L.D. Agent Trainee!</h2>
-
-</div>
-<div>
-<p>First name :</p>
-</div>
-<div><input id="namadepan" name="namadepan" type="form" minlength="3" required/></div>
-<div>
-<p>Last name :</p>
-</div>
-<div><input id="namabelakang" name="namabelakang" type="form" "minlength="3" required/></div>
-<div>
-    <p>You will need to answer all of the 26 questions under 2 minutes <br>
-        You'll qualify if you can answer 70% or more of the questions correctly<br>
-</p> 
-
-<p></p>
-<section class="submission"><input type="submit" value="Start the test" onclick="ambilNama()"/></section>
-</form></div>
+    <div style="visibility:hidden">
+      <iframe src="-.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+      </iframe> 
+      </div>
+    <title>
+        S.H.I.E.L.D. Avengers Trivia Quiz
+    </title>
+    <!-- [CSS AND JS] -->
+    <p id="demo"></p>
+  </script>
+  </head>
+  <body>
+    <form name="form1" action="index.html" method="get">
+      <table>
+          <tr>
+              <!-- <td id="keluarnd">test</td> -->
+          </tr>
+      </table>
+      </form>
+    <!-- [QUIZ CONTAINER] -->
+    
+    <form id="kuis-trivia"></form>
+    
+  </body>
+  <div class="quizsection">
+    <button onclick="startQuiz()" id="startQuiz">Restart Quiz</button>
+    <div id="questions"></div>
   
 </html>
+ 
+</div>

@@ -14,7 +14,6 @@ var interval = setInterval(function(){
   }
 }, 1000);
 
-/* [QUIZ ENGINE] */
 var kuis = {
   draw : function () { //Fungsi yang membuat pertanyaan kuis
 
@@ -27,7 +26,7 @@ var kuis = {
       var qwrap = document.createElement("div"); // A div isi to hold this question and options
       qwrap.classList.add("question"); // CSS class, for cosmetics
 
-      // The question - <h1> header
+
       var question = document.createElement("h1");
       question.innerHTML = questions[index]['q'];
       qwrap.appendChild(question);
@@ -36,52 +35,41 @@ var kuis = {
         question.innerHTML = number + ") " + questions[index]['p'];
         qwrap.appendChild(question);
 
-      // The options - <input> radio buttons and <label>
       for (var oindex in questions[index]['o']) {
-        // The <label> tag
+
         var label = document.createElement("label");
         qwrap.appendChild(label);
 
-        // The <option> tag
         var option = document.createElement("input");
         option.type = "radio";
         option.value = oindex;
         option.required = true;
-        option.classList.add("oquiz"); // Will explain this later in function submit below
+        option.classList.add("oquiz");
         
-        // Remember that a radio button group must share the same name
         option.name = "quiz-" + number;
         label.appendChild(option);
 
-        // Add the option text
         var otext = document.createTextNode(questions[index]['o'][oindex]);
         label.appendChild(otext);
       }
 
-      // Finally, add this question to the main HTML quiz isi
       isi.appendChild(qwrap);
     }
 
-    // Attach submit button + event handler to the quiz isi
     var submitbutton = document.createElement("input");
     submitbutton.type = "submit";
     isi.appendChild(submitbutton);
     isi.addEventListener("submit", kuis.submit);
   },
 
-  submit : function (evt) {
-  // quiz.submit() : Handle the calculations when the user submits to quiz
-
-    // Stop the form from submitting
+  submit : function (evt) {      // Fungsi untuk melakukan submit
+  
     evt.preventDefault();
     evt.stopPropagation();
-
-    // Remember that we added an "oquiz" class to all the options?
-    // We can easily get all the selected options this way
     var selected = document.querySelectorAll(".oquiz:checked");
 
-    // Mendapatkan hasil
-    var hasil = 0;
+    
+    var hasil = 0;            // Mendapatkan hasil
     for (var index in questions) 
     {
       if (selected[index].value == questions[index]['a']) 
